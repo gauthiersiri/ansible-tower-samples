@@ -1,6 +1,9 @@
 - name: Hello World Sample
   hosts: all
   tasks:
+    - name: First message
+      debug:
+        msg: "The first message!"
     - name: Hello Message
       debug:
         msg: "Hello World {{ message }}!"
