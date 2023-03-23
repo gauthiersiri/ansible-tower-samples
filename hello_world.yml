@@ -10,4 +10,7 @@
     - name: Pause for 5 minutes to build app cache
       ansible.builtin.pause:
         seconds: 20
+    - name: Example using fail and when together
+      ansible.builtin.fail:
+        msg: The system may not be provisioned according to the CMDB status.
 
