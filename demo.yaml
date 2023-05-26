@@ -1,0 +1,12 @@
+- name: Demo playbook which fails
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World {{ message }}!"
+    - name: Pause for 20 econds
+      ansible.builtin.pause:
+        seconds: 20
+    - name: Fail the playbook
+      ansible.builtin.fail:
+        msg: The system may not be provisioned according to the CMDB status.
