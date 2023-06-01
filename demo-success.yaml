@@ -1,0 +1,9 @@
+- name: Demo playbook which succeed
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World {{ message }}!"
+    - name: Pause for 20 econds
+      ansible.builtin.pause:
+        seconds: 20
